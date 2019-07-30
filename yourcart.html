@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="myjs.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Poetsen One;
+        }
+
+        #table td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div id="mySidenav" class="sidenav" style="font-family: Din17;">
+        <a href="javascript:void(0)" class="closebtn text-right a1" onclick="closeNav()">&times;</a>
+        <a href="home.html" class="text-center a1"><u>HOME</u></a>
+        <div class="container" style="text-align: right">
+            <div class="diveffect" id="ShopP">
+                <p>
+                    <a href="#shop" style="text-decoration: none; font-size: large;" data-toggle="collapse" id="SHOP">
+                        Shop
+                    </a>
+                </p>
+            </div>
+            <div id="shop" class="collapse" style="border-bottom: dashed #E16E1E 1px; margin-bottom: 10%;">
+                <p>
+                    <a href="#dogshop" data-toggle="collapse" style="font-size: large; opacity: 0.8" id="dog">Dog</a>
+                </p>
+                <div id="dogshop" class="collapse">
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Foods</a></p>
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Accessories</a></p>
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Toys</a></p>
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Carries</a></p>
+                </div>
+                <p>
+                    <a href="#catshop" data-toggle="collapse" style="font-size: large; opacity: 0.8;" id="cat">Cat</a>
+                </p>
+                <div id="catshop" class="collapse">
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Foods</a></p>
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Accessories</a></p>
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Toys</a></p>
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Carries</a></p>
+                </div>
+                <p>
+                    <a href="#othersshop" data-toggle="collapse" style="font-size: large; opacity: 0.8;"
+                        id="others">Others</a>
+                </p>
+                <div id="othersshop" class="collapse">
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Foods</a></p>
+                    <p><a href="shop.html" style="color: #665A5A; font-size: small; opacity: 0.7;">Carries</a></p>
+                </div>
+            </div>
+            <div class="diveffect">
+                <a href="#" style="color: black; text-decoration: none">
+                    <p>Small Pets</p>
+                </a>
+            </div>
+            <div class="diveffect">
+                <a href="#" style="color: black; text-decoration: none">
+                    <p>Pet Product</p>
+                </a>
+            </div>
+            <div class="diveffect">
+                <a href="#" style="color: black; text-decoration: none">
+                    <p>Pet Food</p>
+                </a>
+            </div>
+            <div class="diveffect">
+                <a href="#" style="color: black; text-decoration: none">
+                    <p>Training</p>
+                </a>
+            </div>
+            <div class="diveffect">
+                <a href="#" style="color: black; text-decoration: none">
+                    <p>Blog</p>
+                </a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <a href="#" style="color: black;" data-toggle="modal" data-target="#modelId">
+                <p style="writing-mode: vertical-lr; margin-left: 90%;">LOGIN</p>
+            </a>
+            <a href="yourcart.html" style="color: black;">
+                <p style="writing-mode: vertical-lr; margin-left: 90%;">CART</p>
+            </a>
+            <a href="#" style="color: black;" data-toggle="modal" data-target="#modelSearch">
+                <p style="writing-mode: vertical-lr; margin-left: 90%;">SEARCH</p>
+            </a>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #E7B90C;">
+                        <a class="navbar-brand coolBeans" style="padding-left: 3%;">
+                            <img id="huyconcac" src="picture/buttons.png" alt="" width="60%" height="60%;"
+                                onclick="openNav()">
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <p class="nav-link">
+                                        <img src="picture/Pet Shop.png" alt="" width="60%" height="60%"
+                                            style="margin-left: 30%;">
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- End Header-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form class="login">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button>Login</button> <span style="padding: 1vw"></span>
+                        <button>Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modelSearch" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+
+                    <div class="modal-body">
+                        <input class="search__input" type="text" placeholder="Search">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Header-->
+
+        <!-- Payment -->
+        <div class="modal fade" id="modelPayment" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content" style="font-family: Din17; margin: 5%; width: 100%; height: auto;">
+                    <div class="modal-header"></div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row" style="text-align: center;">
+                                <img src="picture/Group 73.png" alt="" style="margin-left: 15%;">
+                            </div>
+                            <hr style="border: dashed #E16E1E 1px;">
+                            <br>
+                            <p>Payment amount</p>
+                            <input type="text" class="form-control" style="border-radius: 25px;">
+                            <p>Name of card</p>
+                            <input type="text" class="form-control" style="border-radius: 25px;">
+                            <p>Card number</p>
+                            <input type="text" class="form-control" style="border-radius: 25px;">
+                            <p>Exipy date</p>
+                            <input type="date" class="form-control" style="border-radius: 25px;">
+                            <p>ZIP/Postal code</p>
+                            <input type="text" class="form-control" style="border-radius: 25px;">
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div style="padding-top: 7%;"></div>
+        <div class="container">
+            <div class="col-sm-5" style="font-size: larger">
+                <span style="border-right: dashed black 1px; padding: 2%; margin: 3%;">
+                    <a href="home.html" target="_blank" style="color: black;"><i class="fa fa-home"
+                            aria-hidden="true"></i></a>
+                </span>
+                Your Cart
+            </div>
+        </div>
+
+        <div style="padding-top: 5%;"></div>
+        <div class="container" style="text-align: center; font-family: Din17">
+            <div class="table-responsive">
+                <table class="table table-condensed" id="table" style="border-spacing: 0 15px;">
+                    <tr>
+                        <th></th>
+                        <th>Item</th>
+                        <th>Size</th>
+                        <th>Amount</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="col-sm-5">
+                                <img src="picture/cb7b358e370f9d6b9b1c38cb81c9b836.png" alt=""
+                                    style='height: auto; width: 100%; '>
+                            </div>
+                        </td>
+                        <td>Wood Dogs House </td>
+                        <td>Size Medium</td>
+                        <td style="font-size: larger">
+                            <a href="#" style="color: #E16E1E" onclick="downQua1()">-</a>
+                            <span id="quaPro1">1</span>
+                            <a href="#" style="color: #E16E1E" onclick="upQua1()">+</a>
+                        </td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="col-sm-5">
+                                <img src="picture/cb7b358e370f9d6b9b1c38cb81c9b836.png" alt=""
+                                    style='height: auto; width: 100%; '>
+                            </div>
+                        </td>
+                        <td>ProPlan Dogs Food </td>
+                        <td>Size Medium</td>
+                        <td style="font-size: larger">
+                            <a href="#" style="color: #E16E1E" onclick="downQua2()">-</a>
+                            <span id="quaPro2">1</span>
+                            <a href="#" style="color: #E16E1E" onclick="upQua2()">+</a>
+                        </td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="col-sm-5">
+                                <img src="picture/cb7b358e370f9d6b9b1c38cb81c9b836.png" alt=""
+                                    style='height: auto; width: 100%; '>
+                            </div>
+                        </td>
+                        <td>Kitten Food </td>
+                        <td>Size Small</td>
+                        <td style="font-size: larger">
+                            <a href="#" style="color: #E16E1E" onclick="downQua3()">-</a>
+                            <span id="quaPro3">1</span>
+                            <a href="#" style="color: #E16E1E" onclick="upQua3()">+</a>
+                        </td>
+                        <td>$50</td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr style="border: dashed #E16E1E 1px;">
+
+            <div class="row" style="text-align: right; font-size: x-large; font-family: Poetsen One;">
+                <div class="col-9">Subtotal: </div>
+                <div class="col-3">$350</div>
+            </div>
+        </div>
+        <div style="padding-top: 5%"></div>
+        <div class="col-sm-11" style="font-size: large; text-align: right;">
+            <button type="button" class="btn btn-warning" style="color: white; font-size: x-large;
+            text-decoration: underline; border-radius: 25px" ; data-toggle="modal" ;
+                data-target="#modelPayment">Payment</button>
+        </div>
+
+
+
+
+
+
+        <div class="footerpadding">
+            <div style="padding-top: 10%"></div>
+        </div>
+        <!--Footer-->
+        <div class="container-fluid" style="position: relative; font-family: Din17;">
+            <div class="row">
+                <div class="container" style="background-color: #665A5A; border-radius: 25px; 
+            height: auto; color: white; z-index: 1; padding:2%;">
+                    <div class=" col-sm-4 footer" style="font-size: small;">
+                        <span style="font-size: large; font-family: Poetsen One;">Information</span> <br> <br>
+                        <span><img src="image/address.png" alt="" />&nbsp;&nbsp;&nbsp; Ly Chinh Thang- Ho Chi Minh
+                            city-
+                            Viet Nam</span><br /><br />
+                        <span><img src="image/mobile.png" alt="" />&nbsp;&nbsp;&nbsp;0 0 0 - 0 0 0 0 - 0
+                            0</span><br /><br />
+                        <span><img src="image/phone.png" alt="" />&nbsp;&nbsp;&nbsp;1 2 3 4 5 6 7 8
+                            9</span><br /><br />
+                        <span><img src="image/email.png" alt="" />&nbsp;&nbsp;&nbsp;
+                            Petstore@gmail.com</span><br /><br />
+                    </div>
+                    <div class="col-sm-2 footer" style="font-size: small;">
+                        <span style="font-size: large; font-family: Poetsen One;">About us</span> <br> <br>
+                        <span>Delivery Information</span><br><br>
+                        <span>Privacy Policy</span><br> <br>
+                        <span>Terms & Conditions</span> <br><br>
+                        <span>Site Map</span><br><br>
+                    </div>
+                    <div class="col-sm-2 footer" style="font-size: small;">
+                        <span style="font-size: large; font-family: Poetsen One;">My Account</span> <br> <br>
+                        <span>Order History</span><br><br>
+                        <span>Wish List</span><br> <br>
+                        <span>Newsletter</span> <br><br>
+                        <span></span><br><br>
+                    </div>
+                    <div class="col-sm-4" style="font-size: large">
+                        <span style="font-family: Poetsen One;">Subscribe Now</span> <br> <br>
+                        <span><input class="form-control" type="text" placeholder="Enter your e-mail Address "
+                                style="border-radius: 25px;"></span> <br>
+                        <span style=" text-align: center;">
+                            <div class="social-container">
+                                <ul class="social-icons">
+                                        <li><a href="https://www.facebook.com/huytna97"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://www.facebook.com/huytna97"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.facebook.com/huytna97"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="https://www.facebook.com/huytna97"><i class="fa fa-codepen"></i></a></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container-fluid" style="background-image: url(image/footer.png); 
+            height: 12em; z-index: -1; position: absolute; background-size: contain;
+            margin-top: -10%;">
+                    <a href="#" id="scroll" style="display: none;"><span></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
